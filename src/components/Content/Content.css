@@ -30,3 +30,15 @@
   font-weight: 600;
   color: #be0061;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 800px) {
+  .content {
+    flex-direction: column;
+  }
+  .content .sidebar {
+    background: rgb(200, 164, 0);
+    width: auto;
+    height: 20vh;
+  }
+}
