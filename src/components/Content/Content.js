@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 import './Content.css';
 
@@ -14,6 +15,7 @@ const Content = () => {
             You Clicked at <span>00: 00 : 00</span>
           </p>
         </div>
+        <Footer></Footer>
       </div>
     </div>
   );
