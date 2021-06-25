@@ -23,11 +23,14 @@ const Content = () => {
       </div>
       <div className='main-content'>
         <div className='message'>
-          {newTime.map((time, index) => (
-            <p key={index}>
-              You Clicked at <span>{time.toLocaleTimeString()}</span>
-            </p>
-          ))}
+          {newTime
+            .slice(0)
+            .reverse()
+            .map((time, index) => (
+              <p key={index}>
+                You Clicked at <span>{time.toLocaleTimeString()}</span>
+              </p>
+            ))}
         </div>
         <Footer></Footer>
       </div>
