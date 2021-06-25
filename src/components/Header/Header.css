@@ -1,0 +1,19 @@
+.header {
+  min-height: 100px;
+  padding: 0 2rem;
+  background: #009e80;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .time {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.header .time span {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #e4ff00;
+}
