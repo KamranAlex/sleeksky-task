@@ -4,13 +4,15 @@ import './Header.css';
 
 const Header = () => {
   const [date, setDate] = useState(new Date());
+
   useEffect(() => {
     var timerID = setInterval(() => updateTime(), 1000);
     return () => {
       clearInterval(timerID);
     };
   });
-  const updateTime = (params) => {
+
+  const updateTime = () => {
     setDate(new Date());
   };
 

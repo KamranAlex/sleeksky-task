@@ -15,7 +15,6 @@ const Content = () => {
     setNewTime([...newTime, newDate]);
   };
 
-  console.log(newTime);
   return (
     <div className='content'>
       <div className='sidebar'>
@@ -32,6 +31,7 @@ const Content = () => {
               </p>
             ))}
         </div>
+
         <Footer></Footer>
       </div>
     </div>
