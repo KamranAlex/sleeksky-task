@@ -1,12 +1,17 @@
+import { createContext, useState } from 'react';
 import './App.css';
-import Content from './components/Content/Content';
+import Content from './components/content/Content';
 import Header from './components/Header/Header';
 
+export const CounterContext = createContext();
 function App() {
+  const [counter, setCounter] = useState(0);
   return (
     <div className='App'>
-      <Header></Header>
-      <Content></Content>
+      <CounterContext.Provider value={[counter, setCounter]}>
+        <Header></Header>
+        <Content></Content>
+      </CounterContext.Provider>
     </div>
   );
 }
