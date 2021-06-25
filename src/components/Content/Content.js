@@ -6,11 +6,16 @@ import './Content.css';
 
 const Content = () => {
   const [counter, setCounter] = useContext(CounterContext);
+  const [newTime, setNewTime] = useState([]);
 
   const updateCounter = () => {
     const newCounter = counter + 1;
     setCounter(newCounter);
+    const newDate = new Date();
+    setNewTime([...newTime, newDate]);
   };
+
+  console.log(newTime);
   return (
     <div className='content'>
       <div className='sidebar'>
@@ -18,9 +23,11 @@ const Content = () => {
       </div>
       <div className='main-content'>
         <div className='message'>
-          <p>
-            You Clicked at <span>00: 00 : 00</span>
-          </p>
+          {newTime.map((time, index) => (
+            <p key={index}>
+              You Clicked at <span>{time.toLocaleTimeString()}</span>
+            </p>
+          ))}
         </div>
         <Footer></Footer>
       </div>
