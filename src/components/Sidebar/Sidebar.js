@@ -1,10 +1,10 @@
 import React from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div className='click-button'>
-      <button>Click Me</button>
+      <button onClick={props.updateCounter}>Click Me</button>
     </div>
   );
 };

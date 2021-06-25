@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { CounterContext } from '../../App';
 import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 import './Content.css';
 
 const Content = () => {
+  const [counter, setCounter] = useContext(CounterContext);
+
+  const updateCounter = () => {
+    const newCounter = counter + 1;
+    setCounter(newCounter);
+  };
   return (
     <div className='content'>
       <div className='sidebar'>
-        <Sidebar></Sidebar>
+        <Sidebar updateCounter={() => updateCounter()}></Sidebar>
       </div>
       <div className='main-content'>
         <div className='message'>
