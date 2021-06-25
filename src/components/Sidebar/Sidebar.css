@@ -1,0 +1,22 @@
+.click-button {
+  position: relative;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.click-button button {
+  height: 60px;
+  width: 80px;
+  border: 0;
+  outline: 0;
+  border-radius: 3px;
+  font-size: 1rem;
+  background: #ff0083;
+  color: #ffffff;
+}
+.click-button button:hover {
+  background: #00ff8c;
+  color: #000000;
+  cursor: pointer;
+}
